@@ -73,8 +73,12 @@ footer {
     padding-right: 10px;
     
 }
-#titulo-id , #titulo-check, #titulo-eliminar-Tarea{
+#titulo-id, #titulo-eliminar-tarea{
     width: 20px;
+    text-align: center;
+}
+#titulo-check {
+    width: 75px;
 }
 #titulo-lista-tarea {
     width: 350px;
@@ -84,14 +88,20 @@ footer {
 .lista-tareas {
     display: flex;
     padding-top: 5px;
+    height: 207px;
 }
 .lista-tareas > p {
     padding-right: 10px;
     
 }
 
-#id , #check, #eliminarTarea{
+#id, #eliminarTarea{
     width: 20px;
+    text-align: center;
+}
+#check{
+    width: 75px;
+    text-align: center;
 }
 #listaTarea {
     width: 350px;

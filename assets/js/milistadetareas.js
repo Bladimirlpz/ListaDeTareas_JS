@@ -23,23 +23,25 @@ botonAgregar.addEventListener("click", () => {
     
 })
 
-/* let btnInput = document.querySelector("input");
-btnInput.addEventListener ("check", ()=>{
-    let tareaEncontrada = btnInput.value;
-    tareaEncontrada= ;
-    renderTareas();
-} ) */
+// Funcion para marcas tareas realizadas con checkbox
 
-// Funcion para que al hacer check se marque como realizada
-let tareaEncontrada = tareas.find( tarea => tarea.realizada === realizada)
-    tareaEncontrada.realizada = true;
-function tareaRealizada (realizada){
-    
+
+/* function chequeo (realizada){
+let btncheck = document.querySelectorAll("input")
+let tareaEncontrada = tareas.find( (ele) => ele.realizada === false);
+tareaEncontrada.realizada = true ;
+if(btncheck.checked === true){
+    console.log("true")
+}else {
+    console.log("false")
 }
+console.log(tareaEncontrada)
+} */
+
 
 // Funcion para eliminar tareas
 function eliminarTarea (id){
-    let index = tareas.findIndex ((ele)=> ele.id == id);
+    let index = tareas.findIndex ((ele)=> ele.id === id);
     tareas.splice(index,1);
     renderTareas ();
 }
@@ -53,7 +55,7 @@ function renderTareas (){
     for (let tarea of tareas){
     listadoId+= `<p>${tarea.id}</p>`;
     listadoTareas+= `<p>${tarea.descripcionTarea}</p>`;
-    listadoCheck+= `<input type="checkbox" value="${tarea.realizada}">`;
+    listadoCheck+= `<input onclick="chequeo(${tarea.realizada})" type="checkbox"><br>`;
     listadoBorrar+= `<p onclick="eliminarTarea(${tarea.id})"><i class="fa-solid fa-x fa-sm" style="color: #ff090f;"></i></p>`;      
     }
     listaId.innerHTML = listadoId;
