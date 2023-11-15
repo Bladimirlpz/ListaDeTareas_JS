@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(206, 206, 206);
+    width: 900px;
+    height: 400px;
+    padding: 20px;
+}
+
+header {
+    height: 100px;
+}
+header > h1 {
+    font-size: 60px;
+}
+
+.seccion-agregar {
+    height: 250px;
+}
+
+footer {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.agregar {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+#tareaNueva {
+    margin-right: 10px;
+    border-radius: 10px;
+    width: 790px;
+}
+#agregarTarea {
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+.resumen {
+    padding-top: 20px;
+    width: 350px;
+}
+/* Seccion tareas */
+.seccion-tareas {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Seccion Titulos de tareas */
+.titulos-tareas {
+    display: flex;
+    padding-top: 20px;
+}
+.titulos-tareas > p {
+    padding-right: 10px;
+    
+}
+#titulo-id , #titulo-check, #titulo-eliminar-Tarea{
+    width: 20px;
+}
+#titulo-lista-tarea {
+    width: 350px;
+}
+
+/* Seccion lista de tareas */
+.lista-tareas {
+    display: flex;
+    padding-top: 5px;
+}
+.lista-tareas > p {
+    padding-right: 10px;
+    
+}
+
+#id , #check, #eliminarTarea{
+    width: 20px;
+}
+#listaTarea {
+    width: 350px;
+}

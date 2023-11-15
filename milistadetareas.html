@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Listo de tarea</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/milistadetareas.css">
+    <!-- font -->
+    <script src="https://kit.fontawesome.com/b89a309f81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="todo-list">
+        <header>
+            <h1>Todo List</h1>
+            
+        </header>
+
+        <section id="seccion-agregar">
+            <h3>Nueva tarea</h3>
+            <div class="agregar">
+                <input type="text" id="tareaNueva">
+                <button id="agregarTarea">Agregar Tarea</button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="resumen">
+                <p>Tareas: <span id="contador-tareas">No tienes tareas pendientes</span></p>
+                <p>Realizadas: <span id="tareas-realizadas">No tienes tareas realizadas</span></p>
+            </div>
+            <div class="seccion-tareas">
+                <div class="titulos-tareas">
+                    <p id="titulo-id"><b>ID</b></p>
+                    <p id="titulo-lista-tarea"><b>Tarea</b></p>
+                    <p id="titulo-check"></p>
+                    <p id="titulo-eliminar-tarea"></p>
+                </div>
+                <div class="lista-tareas">
+                    
+                    <p id="id"></p>
+                    
+                    <p id="listaTarea"></p>
+                    
+                    <p id="check"></p>
+                    
+                    <p id="eliminarTarea"></p>
+                </div>
+            </div>
+    </section>
+
+    <script src="./assets/js/milistadetareas.js"></script>
+</body>
+</html>
