@@ -6,38 +6,23 @@ let listaDeTareas = document.querySelector("#listaTarea");
 let listaCheck = document.querySelector("#check");
 let listaEliminarTarea = document.querySelector("#eliminarTarea");
 let cuentaTareas = document.querySelector("#contador-tareas");
-const tareas = [];
+const tareas = [{ id : 1, descripcionTarea: "Pasear al peroo", realizada: false},
+                { id : 2, descripcionTarea: "Pasear al gato", realizada: false},
+                { id : 3, descripcionTarea: "Terminar tarea", realizada: false}];
 
 // Evento para boton de agregar tareas
+//tareas[tareas.length-1].id-1
 botonAgregar.addEventListener("click", () => {
     if (tareaNueva.value){
     let tarea = tareaNueva.value;
-    tareas.push({ id : tareas.length + 1, descripcionTarea: tarea, realizada: false});
+    tareas.push({ id :  tareas[tareas.length-1].id+1, descripcionTarea: tarea, realizada: false});
     tareaNueva.value = "";
-    console.log(tareas)
-    renderTareas();
 }
     else {
         alert ("Debe ingresar una tarea")
-    }
-    
+    } 
+    renderTareas();
 })
-
-// Funcion para marcas tareas realizadas con checkbox
-
-
-/* function chequeo (realizada){
-let btncheck = document.querySelectorAll("input")
-let tareaEncontrada = tareas.find( (ele) => ele.realizada === false);
-tareaEncontrada.realizada = true ;
-if(btncheck.checked === true){
-    console.log("true")
-}else {
-    console.log("false")
-}
-console.log(tareaEncontrada)
-} */
-
 
 // Funcion para eliminar tareas
 function eliminarTarea (id){
@@ -55,7 +40,7 @@ function renderTareas (){
     for (let tarea of tareas){
     listadoId+= `<p>${tarea.id}</p>`;
     listadoTareas+= `<p>${tarea.descripcionTarea}</p>`;
-    listadoCheck+= `<input onclick="chequeo(${tarea.realizada})" type="checkbox"><br>`;
+    listadoCheck+= `<input onchange="" type="checkbox" class="check"><br>`;
     listadoBorrar+= `<p onclick="eliminarTarea(${tarea.id})"><i class="fa-solid fa-x fa-sm" style="color: #ff090f;"></i></p>`;      
     }
     listaId.innerHTML = listadoId;
@@ -71,5 +56,36 @@ function renderTareas (){
     }  
 }
 
+//Tareas iniciales
+
+let listadoId="";
+    let listadoTareas = "";
+    let listadoCheck = "";
+    let listadoBorrar = "";
+for (let tarea of tareas){
+    listadoId+= `<p>${tarea.id}</p>`;
+    listadoTareas+= `<p>${tarea.descripcionTarea}</p>`;
+    listadoCheck+= `<input onchange="" type="checkbox" class="check"><br>`;
+    listadoBorrar+= `<p onclick="eliminarTarea(${tarea.id})"><i class="fa-solid fa-x fa-sm" style="color: #ff090f;"></i></p>`;      
+    }
+    listaId.innerHTML = listadoId;
+    listaDeTareas.innerHTML = listadoTareas;
+    listaCheck.innerHTML = listadoCheck;
+    listaEliminarTarea.innerHTML = listadoBorrar;
+    if (tareas.length >= 1){
+        cuentaTareas.innerHTML= `Tienes ${tareas.length} tareas pendientes`; 
+    }else {
+        cuentaTareas.innerHTML= `No tienes tareas pendientes`;    
+    }
 
 
+
+// Funcion para marcas tareas realizadas con checkbox
+
+/* let btncheck = document.querySelectorAll(".check");
+        btncheck.forEach((e) =>{
+            if (e.checked === true)
+            console.log(e)
+        })
+console.log(btncheck) */
+console.log(tareas)
