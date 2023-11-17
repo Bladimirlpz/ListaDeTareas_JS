@@ -11,7 +11,6 @@ const tareas = [{ id : 1, descripcionTarea: "Pasear al peroo", realizada: false}
                 { id : 3, descripcionTarea: "Terminar tarea", realizada: false}];
 
 // Evento para boton de agregar tareas
-//tareas[tareas.length-1].id-1
 botonAgregar.addEventListener("click", () => {
     if (tareaNueva.value){
     let tarea = tareaNueva.value;
@@ -81,11 +80,17 @@ for (let tarea of tareas){
 
 
 // Funcion para marcas tareas realizadas con checkbox
-
-/* let btncheck = document.querySelectorAll(".check");
-        btncheck.forEach((e) =>{
-            if (e.checked === true)
-            console.log(e)
-        })
-console.log(btncheck) */
-console.log(tareas)
+let  checkbox = document.querySelectorAll(".check")
+let spanRealizadas = document.querySelector("#tareas-realizadas");
+let tareaRealizada = tareas.find( tarea => tarea.realizada === false)
+if (checkbox.onchange === true){
+    tareaRealizada = true;
+} else if (checkbox.onchange === false){
+    tareaRealizada = false
+}
+//contador tareas realizadas
+else if (tareaRealizada === true ){
+    spanRealizadas.innerHTML= `Tienes ${tareas.length} tareas realizas`; 
+}else {
+    spanRealizadas.innerHTML= `No tienes tareas pendientes`;    
+}  
