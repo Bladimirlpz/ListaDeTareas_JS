@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Listo de tarea</title>
+    <title>Desafio Listo de tarea Bladimir Lopez</title>
     <!-- Css -->
     <link rel="stylesheet" href="./assets/css/milistadetareas.css">
     <!-- font -->
@@ -12,10 +12,8 @@
 <body>
     <section id="todo-list">
         <header>
-            <h1>Todo List</h1>
-            
+            <h1>ToDo List</h1>
         </header>
-
         <section id="seccion-agregar">
             <h3>Nueva tarea</h3>
             <div class="agregar">
@@ -23,32 +21,27 @@
                 <button id="agregarTarea">Agregar Tarea</button>
             </div>
         </section>
-
         <footer>
             <div class="resumen">
-                <p>Tareas: <span id="contador-tareas">No tienes tareas pendientes</span></p>
-                <p>Realizadas: <span id="tareas-realizadas">No tienes tareas realizadas</span></p>
+                <b>Tareas:</b><p id="contador-tareas"></p><br>
+                <b>Realizadas:</b><p id="tareas-realizadas"></p>
             </div>
             <div class="seccion-tareas">
                 <div class="titulos-tareas">
                     <p id="titulo-id"><b>ID</b></p>
                     <p id="titulo-lista-tarea"><b>Tarea</b></p>
-                    <p id="titulo-check">Realizadas</p>
+                    <p id="titulo-check"></p>
                     <p id="titulo-eliminar-tarea"></p>
                 </div>
-                <div class="lista-tareas">
-                    
-                    <p id="id"></p>
-                    
-                    <p id="listaTarea"></p>
-                    
-                    <p id="check"></p>
-                    
+                <div class="lista-tareas">   
+                    <p id="id"></p>  
+                    <p id="listaTarea"></p>    
+                    <p id="check"></p>                
                     <p id="eliminarTarea"></p>
                 </div>
             </div>
     </section>
-
+    <!-- JS -->
     <script src="./assets/js/milistadetareas.js"></script>
 </body>
 </html>
