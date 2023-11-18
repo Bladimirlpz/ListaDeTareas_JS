@@ -6,9 +6,9 @@ let listaDeTareas = document.querySelector("#listaTarea");
 let listaCheck = document.querySelector("#check");
 let listaEliminarTarea = document.querySelector("#eliminarTarea");
 let cuentaTareas = document.querySelector("#contador-tareas");
-const tareas = [{ id : 1, descripcionTarea: "Pasear al peroo", realizada: false},
+const tareas = [{ id : 1, descripcionTarea: "Pasear al perro", realizada: false},
                 { id : 2, descripcionTarea: "Pasear al gato", realizada: false},
-                { id : 3, descripcionTarea: "Terminar tarea", realizada: false}];
+                { id : 3, descripcionTarea: "Terminar tarea Uni", realizada: false}];
 
     //Tareas iniciales
 
